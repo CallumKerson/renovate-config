@@ -7,6 +7,7 @@
     "enabled": true
   },
   "internalChecksFilter": "strict",
+  "minimumReleaseAge": "1 week",
   "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
