@@ -8,7 +8,7 @@ on:
     branches:
       - main
 env:
-  RENOVATE_VERSION: 37.330.0 # renovate: datasource=npm depName=renovate
+  RENOVATE_VERSION: 37.432.0 # renovate: datasource=npm depName=renovate
 jobs:
   validate:
     runs-on: ubuntu-latest
