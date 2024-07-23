@@ -23,4 +23,4 @@ jobs:
         name: check local renovate.json
         with:
           validator_version: ${{ env.RENOVATE_VERSION }}
-          config_file_path: renovate.json
+          config_file_path: .renovaterc.json
