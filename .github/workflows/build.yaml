@@ -1,0 +1,26 @@
+name: build
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+env:
+  RENOVATE_VERSION: 37.330.0 # renovate: datasource=npm packageName=renovate
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
+        name: check renovate config.js
+        with:
+          validator_version: ${{ env.RENOVATE_VERSION }}
+          config_file_path: config.js
+      - uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
+        name: check local renovate.json
+        with:
+          validator_version: ${{ env.RENOVATE_VERSION }}
+          config_file_path: renovate.json
