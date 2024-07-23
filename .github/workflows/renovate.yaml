@@ -1,5 +1,15 @@
 name: Renovate
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'info'
+        type: choice
+        options:
+        - info
+        - debug
   schedule:
     - cron: '0/15 * * * *'
 jobs:
