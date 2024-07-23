@@ -26,3 +26,5 @@ jobs:
           configurationFile: config.js
           token: ${{ secrets.RENOVATE_TOKEN }}
           renovate-version: ${{ env.RENOVATE_VERSION }}
+        env:
+          LOG_LEVEL: debug
