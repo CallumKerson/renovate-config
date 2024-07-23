@@ -12,6 +12,8 @@ on:
         - debug
   schedule:
     - cron: '0/15 * * * *'
+env:
+  RENOVATE_VERSION: 37.330.0 # renovate: datasource=docker depName=renovate packageName=ghcr.io/renovatebot/renovate
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -23,3 +25,4 @@ jobs:
         with:
           configurationFile: config.js
           token: ${{ secrets.RENOVATE_TOKEN }}
+          renovate-version: ${{ env.RENOVATE_VERSION }}
