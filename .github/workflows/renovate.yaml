@@ -13,7 +13,7 @@ on:
   schedule:
     - cron: '0/15 * * * *'
 env:
-  RENOVATE_VERSION: 37.440.4@sha256:0f22b5bd80bc4862925d1c29b869b2e6dc2161f00153a4be0a32c0f5bf72f306 # renovate: datasource=docker depName=renovate packageName=ghcr.io/renovatebot/renovate
+  RENOVATE_VERSION: 38.126.2@sha256:d97d9ac934e22ce6b11a244dcf24995d7f2441cb24347f1f752eec046793d484 # renovate: datasource=docker depName=renovate packageName=ghcr.io/renovatebot/renovate
 jobs:
   renovate:
     runs-on: ubuntu-latest
