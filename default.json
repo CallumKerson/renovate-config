@@ -10,11 +10,18 @@
   ],
   "reviewers": ["CallumKerson"],
   "internalChecksFilter": "strict",
+  "minimumReleaseAge": "1 week",
+  "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
       "description": "Lock file maintenance and pins change no version ranges, so merge them once CI passes",
       "matchUpdateTypes": ["lockFileMaintenance", "pin", "pinDigest"],
       "automerge": true
+    },
+    {
+      "description": "Digests track a moving tag or branch, so take them sooner",
+      "matchUpdateTypes": ["digest"],
+      "minimumReleaseAge": "1 day"
     }
   ]
 }
