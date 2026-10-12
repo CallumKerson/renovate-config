@@ -22,6 +22,23 @@
       "description": "Digests track a moving tag or branch, so take them sooner",
       "matchUpdateTypes": ["digest"],
       "minimumReleaseAge": "1 day"
+    },
+    {
+      "description": "Workflow and action updates only affect CI",
+      "matchFileNames": [".github/**"],
+      "semanticCommitType": "ci"
+    },
+    {
+      "description": "Mise tools only affect the build, so updating them must not cut a release",
+      "matchManagers": ["mise"],
+      "semanticCommitType": "build"
+    },
+    {
+      "description": "New versions of this preset are my own changes, so take them straight away. They only change dependency config, so must not cut a release",
+      "matchManagers": ["renovate-config"],
+      "matchDepNames": ["CallumKerson/renovate-config"],
+      "minimumReleaseAge": null,
+      "semanticCommitType": "build"
     }
   ]
 }
