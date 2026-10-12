@@ -6,12 +6,15 @@
     ":semanticCommits",
     ":automergeStableNonMajor",
     ":automergeDigest",
-    ":prHourlyLimit4"
+    ":prHourlyLimit4",
+    "customManagers:dockerfileVersions",
+    "customManagers:githubActionsVersions"
   ],
   "reviewers": ["CallumKerson"],
   "internalChecksFilter": "strict",
   "minimumReleaseAge": "1 week",
   "osvVulnerabilityAlerts": true,
+  "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
       "description": "Lock file maintenance and pins change no version ranges, so merge them once CI passes",
