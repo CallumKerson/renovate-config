@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "always-update": true,
+  "bootstrap-sha": "031e38ea5b7e9d80ebeb43a830956e3ab82d7df1",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "initial-version": "1.0.0",
+      "include-component-in-tag": false,
+      "extra-files": ["README.md"]
+    }
+  }
+}
