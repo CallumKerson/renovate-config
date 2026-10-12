@@ -47,6 +47,13 @@
       "matchDepNames": ["CallumKerson/renovate-config"],
       "minimumReleaseAge": null,
       "semanticCommitType": "build"
+    },
+    {
+      "description": "Astral's releases are trusted, so automerge their tools' minor and patch updates from mise even before 1.0",
+      "matchManagers": ["mise"],
+      "matchDepNames": ["uv", "ruff", "ty"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     }
   ]
 }
