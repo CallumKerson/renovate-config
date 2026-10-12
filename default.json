@@ -17,6 +17,11 @@
   "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
+      "description": "mise writes and verifies the package files under mise/locks/ when it installs npm tools, so leave them to it. A package rule rather than ignorePaths, which would replace the presets' paths",
+      "matchFileNames": ["**/mise/locks/**"],
+      "enabled": false
+    },
+    {
       "description": "Lock file maintenance and pins change no version ranges, so merge them once CI passes",
       "matchUpdateTypes": ["lockFileMaintenance", "pin", "pinDigest"],
       "automerge": true
