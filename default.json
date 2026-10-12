@@ -54,6 +54,13 @@
       "matchDepNames": ["uv", "ruff", "ty"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "description": "The oxc project's releases are trusted, so automerge their tools' minor and patch updates from mise even before 1.0",
+      "matchManagers": ["mise"],
+      "matchDepNames": ["oxfmt", "npm:oxfmt"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     }
   ]
 }
