@@ -1,4 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"]
+  "extends": [
+    "config:best-practices",
+    "schedule:weekly",
+    ":semanticCommits",
+    ":automergeStableNonMajor",
+    ":automergeDigest",
+    ":prHourlyLimit4"
+  ],
+  "reviewers": ["CallumKerson"],
+  "internalChecksFilter": "strict",
+  "packageRules": [
+    {
+      "description": "Lock file maintenance and pins change no version ranges, so merge them once CI passes",
+      "matchUpdateTypes": ["lockFileMaintenance", "pin", "pinDigest"],
+      "automerge": true
+    }
+  ]
 }
