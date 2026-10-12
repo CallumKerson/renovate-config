@@ -61,6 +61,13 @@
       "matchDepNames": ["oxfmt", "npm:oxfmt"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "description": "rumdl's releases are trusted, so automerge their tools' minor and patch updates from mise even before 1.0",
+      "matchManagers": ["mise"],
+      "matchDepNames": ["rumdl", "aqua:rvben/rumdl"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     }
   ]
 }
