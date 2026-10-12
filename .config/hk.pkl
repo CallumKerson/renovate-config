@@ -16,6 +16,11 @@ local linters = new Mapping<String, Step> {
         check_list_files = "oxfmt --no-error-on-unmatched-pattern --list-different {{ files }}"
         fix = "oxfmt --no-error-on-unmatched-pattern --write {{ files }}"
     }
+    // Add new preset files here as well
+    ["renovate"] {
+        glob = List("default.json", ".github/renovate.json")
+        check = "renovate-config-validator --strict --no-global {{ files }}"
+    }
     ["ryl"] = Builtins.ryl
     ["tombi"] = Builtins.tombi
     ["tombi_format"] = Builtins.tombi_format
