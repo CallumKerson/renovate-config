@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0](https://github.com/CallumKerson/renovate-config/compare/v1.0.1...v1.1.0) (2026-10-12)
+
+
+### Features
+
+* automerge oxfmt updates from mise before 1.0 ([#36](https://github.com/CallumKerson/renovate-config/issues/36)) ([b651cca](https://github.com/CallumKerson/renovate-config/commit/b651cca6b3aea2fbb0815f21dd8ab060024b166b))
+* automerge rumdl updates from mise before 1.0 ([#37](https://github.com/CallumKerson/renovate-config/issues/37)) ([37b1d0b](https://github.com/CallumKerson/renovate-config/commit/37b1d0b5eec87536db6897a81752d91d74bc785d))
+* automerge ryl updates from mise before 1.0 ([#38](https://github.com/CallumKerson/renovate-config/issues/38)) ([53851e9](https://github.com/CallumKerson/renovate-config/commit/53851e91f9e5fb2878c16ccb7a02c1c01ee29097))
+* automerge uv, ruff and ty updates from mise before 1.0 ([#35](https://github.com/CallumKerson/renovate-config/issues/35)) ([8362364](https://github.com/CallumKerson/renovate-config/commit/8362364408004737b2178d26874bcf7c1774480b))
+
 ## [1.0.1](https://github.com/CallumKerson/renovate-config/compare/v1.0.0...v1.0.1) (2026-10-12)
 
 
