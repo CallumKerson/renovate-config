@@ -1,0 +1,38 @@
+[tools]
+actionlint = "1.7.12"
+"aqua:owenlamont/ryl" = "0.24.0"
+aube = "2.7.0"
+hk = "2.5.0"
+node = "24.21.0"
+oxfmt = { depends = "aube", "version" = "0.72.0" }
+rumdl = "0.2.79"
+# actionlint runs shellcheck over workflow run: scripts
+shellcheck = "0.11.0"
+tombi = "1.8.1"
+typos = "1.51.1"
+zizmor = "1.30.1"
+
+[task_config]
+includes = ["tasks"]
+
+[tasks.check]
+run = "hk check --no-fail-fast"
+
+[tasks.check-pr]
+run = "hk check --from-ref origin/main --to-ref HEAD --no-fail-fast"
+
+[tasks.check-all]
+run = "hk check --all --no-fail-fast"
+
+[tasks.fix]
+run = "hk fix --no-fail-fast"
+
+[tasks.fix-pr]
+run = "hk fix --from-ref origin/main --to-ref HEAD --no-fail-fast"
+
+[tasks.fix-all]
+run = "hk fix --all --no-fail-fast"
+
+[tasks.ci]
+description = "Runs all CI checks - lint"
+depends = ["check-auto"]

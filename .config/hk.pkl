@@ -1,0 +1,55 @@
+amends "package://github.com/jdx/hk/releases/download/v2.5.0/hk@2.5.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.5.0/hk@2.5.0#/Builtins.pkl"
+
+min_hk_version = "2.5.0"
+
+// mise verifies its lockfile and sidecar locks by digest, so formatting them breaks `mise install --locked`.
+// release-please writes CHANGELOG.md, whose commit hashes typos reads as misspellings, and LICENSE is fixed legal text.
+exclude = List(".config/mise.lock", ".config/mise/locks", "CHANGELOG.md", "LICENSE")
+
+local linters = new Mapping<String, Step> {
+    ["rumdl"] = Builtins.rumdl
+    // oxfmt only formats JSON here: tombi, ryl and rumdl own TOML, YAML and Markdown
+    ["oxfmt"] = (Builtins.oxfmt) {
+        glob = List("**/*.json", "**/*.jsonc", "**/*.json5")
+        check = "oxfmt --no-error-on-unmatched-pattern --check {{ files }}"
+        check_list_files = "oxfmt --no-error-on-unmatched-pattern --list-different {{ files }}"
+        fix = "oxfmt --no-error-on-unmatched-pattern --write {{ files }}"
+    }
+    ["ryl"] = Builtins.ryl
+    ["tombi"] = Builtins.tombi
+    ["tombi_format"] = Builtins.tombi_format
+    ["actionlint"] = Builtins.actionlint
+    ["zizmor"] = Builtins.zizmor
+    ["newlines"] = Builtins.newlines
+    ["trailing_whitespace"] = Builtins.trailing_whitespace
+    ["typos"] = Builtins.typos
+}
+
+hooks {
+    ["commit-msg"] {
+        steps {
+            ["check_conventional_commit"] = Builtins.check_conventional_commit
+            ["typos"] {
+                check = "typos {{commit_msg_file}}"
+            }
+        }
+    }
+    ["pre-commit"] {
+        fix = true
+        stash = "git"
+        steps = linters
+    }
+    ["pre-push"] {
+        fix = true
+        stash = "git"
+        steps = linters
+    }
+    ["fix"] {
+        fix = true
+        steps = linters
+    }
+    ["check"] {
+        steps = linters
+    }
+}
