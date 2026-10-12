@@ -1,3 +1,6 @@
 # Local files
 *.local.*
 .DS_Store
+
+# JUnit reports written on CI
+test-results/
