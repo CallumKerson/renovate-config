@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/CallumKerson/renovate-config/compare/v1.0.0...v1.0.1) (2026-10-12)
+
+
+### Bug Fixes
+
+* leave mise's npm tool locks to mise ([#33](https://github.com/CallumKerson/renovate-config/issues/33)) ([049403c](https://github.com/CallumKerson/renovate-config/commit/049403c78dcdbada2fb1d9de21b1dd6254b67cfc))
+
 ## 1.0.0 (2026-10-12)
 
 
