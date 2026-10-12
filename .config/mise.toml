@@ -4,6 +4,16 @@ actionlint = "1.7.12"
 aube = "2.7.0"
 hk = "2.5.0"
 node = "24.21.0"
+"npm:renovate" = { depends = "aube", version = "44.133.0", allow_builds = [
+  # re2 downloads a prebuilt binary, without which the validator checks
+  # regexes with JavaScript's RegExp rather than the RE2 that Renovate runs
+  "re2",
+], trust_policy_excludes = [
+  # Yarn's lead maintainer published 3.2.2 by hand without provenance, from the
+  # release commit yarnpkg/berry@2eb9830, so aube's no-downgrade trust policy
+  # refuses it
+  "@yarnpkg/libzip@3.2.2",
+] }
 oxfmt = { depends = "aube", "version" = "0.72.0" }
 rumdl = "0.2.79"
 # actionlint runs shellcheck over workflow run: scripts
