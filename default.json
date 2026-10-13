@@ -42,6 +42,18 @@
       "semanticCommitType": "build"
     },
     {
+      "description": "Python build backends only affect how the package is built, so must not cut a release",
+      "matchManagers": ["pep621"],
+      "matchDepTypes": ["build-system.requires"],
+      "semanticCommitType": "build"
+    },
+    {
+      "description": "Raising requires-python changes who can install the package, so cut a release",
+      "matchManagers": ["pep621"],
+      "matchDepTypes": ["requires-python"],
+      "semanticCommitType": "fix"
+    },
+    {
       "description": "New versions of this preset are my own changes, so take them straight away. They only change dependency config, so must not cut a release",
       "matchManagers": ["renovate-config"],
       "matchDepNames": ["CallumKerson/renovate-config"],
