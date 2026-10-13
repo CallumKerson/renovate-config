@@ -11,7 +11,7 @@ Extend the default preset in `.github/renovate.json`, pinned to a release:
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>CallumKerson/renovate-config#v1.1.0"]
+  "extends": ["github>CallumKerson/renovate-config#v1.2.0"]
 }
 ```
 

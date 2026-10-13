@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/CallumKerson/renovate-config/compare/v1.1.0...v1.2.0) (2026-10-13)
+
+
+### Features
+
+* bump hk.pkl with hk in one grouped update ([#42](https://github.com/CallumKerson/renovate-config/issues/42)) ([a6f736c](https://github.com/CallumKerson/renovate-config/commit/a6f736c041fb8ee6c7ebd2f4f411853053af3ce6))
+* set commit types for Python build backends and requires-python ([#41](https://github.com/CallumKerson/renovate-config/issues/41)) ([10f43cf](https://github.com/CallumKerson/renovate-config/commit/10f43cf80c7eae2944cca6a0c67d927e79333a98))
+
 ## [1.1.0](https://github.com/CallumKerson/renovate-config/compare/v1.0.1...v1.1.0) (2026-10-12)
 
 
