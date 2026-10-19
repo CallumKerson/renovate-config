@@ -14,7 +14,7 @@ node = "24.21.0"
   # refuses it
   "@yarnpkg/libzip@3.2.2",
 ] }
-oxfmt = { depends = "aube", "version" = "0.72.0" }
+oxfmt = { depends = "aube", "version" = "0.73.0" }
 rumdl = "0.2.79"
 # actionlint runs shellcheck over workflow run: scripts
 shellcheck = "0.11.0"
