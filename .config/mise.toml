@@ -1,8 +1,8 @@
 [tools]
-actionlint = "1.7.12"
 "aqua:owenlamont/ryl" = "0.24.0"
 aube = "2.7.0"
-hk = "2.5.0"
+hk = "2.7.0"
+jactionlint = "2.3.0"
 node = "24.21.0"
 "npm:renovate" = { depends = "aube", version = "44.164.7", allow_builds = [
   # re2 downloads a prebuilt binary, without which the validator checks
@@ -16,11 +16,10 @@ node = "24.21.0"
 ] }
 oxfmt = { depends = "aube", "version" = "0.73.0" }
 rumdl = "0.2.79"
-# actionlint runs shellcheck over workflow run: scripts
+# jactionlint runs shellcheck over workflow run: scripts
 shellcheck = "0.11.0"
 tombi = "1.8.1"
 typos = "1.51.1"
-zizmor = "1.30.1"
 
 [task_config]
 includes = ["tasks"]
