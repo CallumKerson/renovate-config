@@ -210,10 +210,10 @@ allow_builds = '["re2"]'
 trust_policy_excludes = '["@yarnpkg/libzip@3.2.2"]'
 
 [[tools.oxfmt]]
-version = "0.73.0"
-aube = { path = "mise/locks/oxfmt/0.73.0", digest = "sha256:e42eeebedd060ec6393c40caa35362b541991453b9aab2de3d33d41a0c245a62" }
+version = "0.75.0"
+aube = { path = "mise/locks/oxfmt/0.75.0", digest = "sha256:1d4f470a5dbba272218132db6ff9ba1911075d29dcd3253a0e02b4a5037a8a23" }
 backend = "npm:oxfmt"
-specifiers = ["0.73.0"]
+specifiers = ["0.75.0"]
 
 [[tools.rumdl]]
 version = "0.2.79"
