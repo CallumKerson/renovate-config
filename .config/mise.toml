@@ -1,6 +1,6 @@
 [tools]
 "aqua:owenlamont/ryl" = "0.26.1"
-aube = "v2.8.3"
+aube = "v2.8.5"
 hk = "2.7.0"
 jactionlint = "2.3.0"
 node = "24.21.0"
