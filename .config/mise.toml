@@ -4,7 +4,7 @@ aube = "v2.8.3"
 hk = "2.7.0"
 jactionlint = "2.3.0"
 node = "24.21.0"
-"npm:renovate" = { depends = "aube", version = "44.198.0", allow_builds = [
+"npm:renovate" = { depends = "aube", version = "44.221.1", allow_builds = [
   # re2 downloads a prebuilt binary, without which the validator checks
   # regexes with JavaScript's RegExp rather than the RE2 that Renovate runs
   "re2",
